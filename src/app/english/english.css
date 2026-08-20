@@ -1,0 +1,12 @@
+:host { display: block; text-align: center; }
+h2 { margin: 0 0 10px; color: #18324b; font: 700 clamp(1.9rem, 4vw, 2.8rem) 'Space Grotesk', sans-serif; }
+.instruction { margin: 0 auto 24px; color: #65758a; }
+.alphabet-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(52px, 1fr)); gap: 10px; max-width: 700px; margin: 24px auto; }
+.alphabet-grid button { width: 100%; min-height: 52px; padding: 0; border: 1px solid #d7e3df; border-radius: 14px; background: #f7fbf9; color: #18324b; font: 700 1.35rem 'Space Grotesk', sans-serif; cursor: pointer; transition: .2s ease; }
+.alphabet-grid button:hover, .alphabet-grid button:focus-visible { border-color: #1ca989; background: #e7f7f2; transform: translateY(-2px); outline: none; }
+.word-box { display: inline-block; min-width: 220px; margin-top: 12px; padding: 16px 24px; border-left: 4px solid #f2765e; border-radius: 12px; background: #fff7f3; color: #8c402e; font-size: 1.5rem; font-weight: 700; animation: fadeIn .3s ease-out; }
+.word-box p { margin: 0; display: inline-block; vertical-align: middle; }
+.speak-btn { margin-left: 12px; padding: 4px 10px; border: none; background: transparent; font-size: 1.3rem; cursor: pointer; vertical-align: middle; }
+.speak-btn:hover, .speak-btn:focus-visible { transform: scale(1.15); outline: none; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+  

@@ -1,0 +1,23 @@
+<div class="telugu-content">
+    <h2>తెలుగు వర్ణమాల</h2>
+    <p class="instruction">🔤 అక్షరాన్ని నొక్కండి, ఒక పదం చూడండి (e.g. అ &rarr; అమ్మ)</p>
+
+    <div class="varnamala">
+      <p class="section-title">అచ్చులు (Vowels):</p>
+      <div class="alphabet-grid">
+        <button type="button" *ngFor="let letter of vowels" (click)="onLetterClick(letter)">{{ letter }}</button>
+      </div>
+
+      <p class="section-title">హల్లులు (Consonants):</p>
+      <div class="alphabet-grid">
+        <button type="button" *ngFor="let letter of consonants" (click)="onLetterClick(letter)">{{ letter }}</button>
+      </div>
+    </div>
+
+    <div class="word-box" *ngIf="selectedWord">
+      <p>{{ selectedLetter }} &rarr; {{ selectedWord }}</p>
+      <button type="button" class="speak-btn" (click)="speakWord()" aria-label="Listen">🔊</button>
+    </div>
+    <p class="voice-hint" *ngIf="selectedWord && voiceUnavailable">🔇 Telugu voice isn't installed on this device. Add it via Windows Settings &rarr; Time &amp; Language &rarr; Speech.</p>
+  </div>
+  

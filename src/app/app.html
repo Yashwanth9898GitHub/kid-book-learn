@@ -1,0 +1,47 @@
+<main class="main">
+  <header class="hero">
+    <div class="brand-mark" aria-hidden="true">KB</div>
+    <div class="hero-copy">
+      <p class="eyebrow">A little place to learn</p>
+      <h1>Kid Book</h1>
+      <p class="hero-intro">Bright, bite-sized lessons for curious young minds.</p>
+    </div>
+  </header>
+
+  <nav class="content" aria-label="Learning subjects">
+    <button type="button" [class.active]="selectedTab === 'home'" [attr.aria-current]="selectedTab === 'home' ? 'page' : null" (click)="showHome()">Home</button>
+    <button type="button" [class.active]="selectedTab === 'telugu'" (click)="showTelugu()">Telugu</button>
+    <button type="button" [class.active]="selectedTab === 'hindi'" (click)="showHindi()">Hindi</button>
+    <button type="button" [class.active]="selectedTab === 'english'" (click)="showEnglish()">English</button>
+    <button type="button" [class.active]="selectedTab === 'math'" (click)="showMath()">Math</button>
+    <button type="button" [class.active]="selectedTab === 'color'" (click)="showColor()">Colors</button>
+  </nav>
+
+  <section class="lesson-panel" *ngIf="selectedTab === 'home'">
+    <div class="home-container">
+      <div class="home-image" aria-hidden="true"><span>ABC</span><span>+</span><span>अ</span></div>
+      <div class="home-text">
+        <p class="section-kicker">Choose your next adventure</p>
+        <h2>Learn something wonderful today.</h2>
+        <p class="animated-text">{{ displayText }}</p>
+        <p class="home-hint">Pick a subject above to begin exploring.</p>
+      </div>
+    </div>
+  </section>
+  <app-english *ngIf="selectedTab === 'english'"></app-english>
+  <app-math *ngIf="selectedTab === 'math'"></app-math>
+  <app-telugu *ngIf="selectedTab === 'telugu'"></app-telugu>
+  <app-color *ngIf="selectedTab === 'color'"></app-color>
+  <app-hindi *ngIf="selectedTab === 'hindi'"></app-hindi>
+</main>
+<footer>
+  <div class="footer-details">
+    <p class="footer-author">Developed by <strong>Yashwanth Jitta</strong></p>
+    <nav class="footer-links" aria-label="Author links">
+      <a href="https://www.linkedin.com/in/yashwanth-reddy-jitta-783328231/" target="_blank" rel="noreferrer">LinkedIn</a>
+      <a href="https://github.com/Yashwanth9898GitHub" target="_blank" rel="noreferrer">GitHub</a>
+    </nav>
+    <p class="footer-copyright">&copy; 2026 Yashwanth Jitta. All rights reserved.</p>
+  </div>
+</footer>
+

@@ -1,0 +1,28 @@
+<h2>Math Section</h2>
+<h3>Numbers from 1 to 10:</h3>
+<p>
+  <span *ngFor="let num of numbers">{{ num }} </span>
+</p>
+
+<h3>Perform Operations</h3>
+
+<!-- Two-Way Data Binding for Numbers -->
+<label>
+  Number 1:
+  <input type="number" [(ngModel)]="num1" />
+</label>
+<br />
+<label>
+  Number 2:
+  <input type="number" [(ngModel)]="num2" />
+</label>
+<br /><br />
+
+<!--Event Binding for Operations -->
+<button (click)="add()">Add</button>
+<button (click)="subtract()">Subtract</button>
+<button (click)="multiply()">Multiply</button>
+<button (click)="divide()">Divide</button>
+
+<!--interpolation-->
+<h3>Result: {{ result }}</h3>

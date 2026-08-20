@@ -1,0 +1,43 @@
+:host {
+  --ink: #18324b;
+  --muted: #65758a;
+  --paper: #ffffff;
+  --mint: #1ca989;
+  --coral: #f2765e;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  color: var(--ink);
+  font-family: 'DM Sans', sans-serif;
+  background: #ffffff;
+}
+
+.main { flex: 1; width: 100%; max-width: 1180px; margin: 0 auto; padding: 48px 28px 56px; }
+.hero { display: flex; align-items: center; gap: 20px; margin-bottom: 36px; }
+.brand-mark { display: grid; place-items: center; width: 64px; height: 64px; border-radius: 18px; background: var(--coral); color: white; font: 700 1.3rem 'Space Grotesk', sans-serif; transform: rotate(-5deg); box-shadow: 7px 7px 0 #ffd29d; }
+.eyebrow, .section-kicker { margin: 0 0 7px; color: var(--mint); font-size: .78rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
+h1, h2 { font-family: 'Space Grotesk', sans-serif; }
+h1 { margin: 0; font-size: clamp(2.8rem, 7vw, 5.5rem); line-height: .95; letter-spacing: -.04em; }
+.hero-intro { margin: 12px 0 0; color: var(--muted); font-size: 1.08rem; }
+.content { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 28px; padding-bottom: 18px; border-bottom: 1px solid #e3ebe8; }
+button { border: 1px solid #d7e3df; border-radius: 8px; padding: 11px 19px; color: var(--ink); background: #ffffff; cursor: pointer; font: 700 .95rem 'DM Sans', sans-serif; transition: .2s ease; }
+button:hover, button:focus-visible { border-color: var(--mint); transform: translateY(-2px); box-shadow: 0 6px 14px rgba(24,50,75,.12); outline: none; }
+button.active { border-color: var(--mint); color: white; background: var(--mint); }
+.lesson-panel, app-english, app-math, app-telugu, app-color, app-hindi { display: block; width: 100%; padding: clamp(28px, 5vw, 64px) 0; background: var(--paper); animation: fadeIn .35s ease; }
+.home-container { display: flex; align-items: center; gap: clamp(28px, 6vw, 80px); max-width: 900px; margin: auto; }
+.home-image { display: flex; flex: 0 0 220px; flex-direction: column; align-items: center; justify-content: center; gap: 5px; width: 220px; height: 220px; border-radius: 34% 66% 54% 46% / 42% 38% 62% 58%; color: white; background: var(--mint); box-shadow: 12px 12px 0 #bce6d9; font: 700 2.1rem 'Space Grotesk', sans-serif; transform: rotate(-4deg); }
+.home-image span:nth-child(2) { color: #ffd166; font-size: 2.7rem; }
+.home-text { max-width: 560px; }
+.home-text h2 { margin: 0 0 18px; font-size: clamp(1.8rem, 4vw, 3.3rem); line-height: 1.05; }
+.animated-text { min-height: 112px; margin: 0; color: #47617a; font-size: 1.1rem; line-height: 1.7; white-space: pre-wrap; }
+.home-hint { margin: 10px 0 0; color: var(--muted); }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+footer { margin-top: 0; padding: 22px 28px; color: var(--muted); background: #18324b; }
+.footer-details { display: flex; align-items: center; justify-content: space-between; gap: 18px; max-width: 1180px; margin: auto; font-size: .88rem; }
+.footer-details p { margin: 0; }
+.footer-author { color: white; }
+.footer-links { display: flex; gap: 18px; }
+footer a { color: #9fe3d2; text-decoration: none; }
+footer a:hover, footer a:focus-visible { color: white; text-decoration: underline; }
+@media (max-width: 700px) { .main { padding: 36px 16px 28px; } .hero { margin-bottom: 28px; } .brand-mark { width: 54px; height: 54px; } .home-container { flex-direction: column; text-align: center; } .home-image { flex-basis: 170px; width: 170px; height: 170px; font-size: 1.6rem; } .animated-text { min-height: 170px; } .lesson-panel, app-english, app-math, app-telugu, app-color, app-hindi { padding: 28px 0; } .footer-details { flex-direction: column; text-align: center; } }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; } }

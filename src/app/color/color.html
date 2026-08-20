@@ -1,0 +1,13 @@
+<div class="color-container">
+    <p class="instruction">🎨 Click on the color box to change its color!</p>
+  
+    <div
+      class="color-box"
+      [ngStyle]="{ 'background-color': selectedColor }"
+      (click)="changeColor()"
+      title="Click to change color"
+    ></div>
+  
+    <p class="color-name">Selected Color: <strong>{{ selectedColor }}</strong></p>
+  </div>
+  

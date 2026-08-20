@@ -1,0 +1,12 @@
+<h2>English Alphabets</h2>
+<p class="instruction">🔤 Click an alphabet to see a word like "A for Apple"</p>
+<div class="alphabet-grid">
+  <button *ngFor="let letter of letters" (click)="onLetterClick(letter)">
+    {{ letter }}
+  </button>
+</div>
+
+<div class="word-box" *ngIf="selectedWord">
+  <p>{{ selectedWord }}</p>
+  <button type="button" class="speak-btn" (click)="speakWord()" aria-label="Listen">🔊</button>
+</div>

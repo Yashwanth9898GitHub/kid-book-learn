@@ -1,0 +1,23 @@
+<div class="hindi-content">
+    <h2>हिन्दी वर्णमाला</h2>
+    <p class="instruction">🔤 अक्षर पर क्लिक करें, एक शब्द देखें (e.g. अ &rarr; अम्मा)</p>
+
+    <div class="varnamala">
+      <p class="section-title">स्वर (Vowels):</p>
+      <div class="alphabet-grid">
+        <button type="button" *ngFor="let letter of vowels" (click)="onLetterClick(letter)">{{ letter }}</button>
+      </div>
+
+      <p class="section-title">व्यंजन (Consonants):</p>
+      <div class="alphabet-grid">
+        <button type="button" *ngFor="let letter of consonants" (click)="onLetterClick(letter)">{{ letter }}</button>
+      </div>
+    </div>
+
+    <div class="word-box" *ngIf="selectedWord">
+      <p>{{ selectedLetter }} &rarr; {{ selectedWord }}</p>
+      <button type="button" class="speak-btn" (click)="speakWord()" aria-label="Listen">🔊</button>
+    </div>
+    <p class="voice-hint" *ngIf="selectedWord && voiceUnavailable">🔇 Hindi voice isn't installed on this device. Add it via Windows Settings &rarr; Time &amp; Language &rarr; Speech.</p>
+  </div>
+  
